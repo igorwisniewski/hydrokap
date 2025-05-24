@@ -85,19 +85,23 @@ export default function Home() {
                     <p className="text-lg md:text-xl mb-6">
                         Profesjonalizm, doświadczenie i skuteczność
                     </p>
-                    <button
-                        className="bg-hydro-400 hover:text-hydro-400 hover:bg-gray-100  text-gray-100 font-bold py-3 px-6 rounded-full transition mr-2">
-                        Skontaktuj się
-                    </button>
-                    <button
-                        className="border-hydro-400 border-2 hover:text-hydro-400 hover:bg-gray-100  text-gray-100 font-bold py-3 px-6 rounded-full transition">
+                    <Link href="/contact">
+                        <button
+                            className="bg-hydro-400 hover:text-hydro-400 hover:bg-gray-100  text-gray-100 font-bold py-3 px-6 rounded-full transition mr-2">
+                            Skontaktuj się
+                        </button>
+                    </Link>
+                    <Link href="/aboutUs">
+                        <button
+                            className="border-hydro-400 border-2 hover:text-hydro-400 hover:bg-gray-100  text-gray-100 font-bold py-3 px-6 rounded-full transition">
                         O nas
-                    </button>
+                        </button>
+                    </Link>
                 </div>
             </section>
             <FadeInSection>
-                    <section className="bg-white py-16 px-6 md:px-16">
-                        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center min-h-screen">
+                <section className="bg-white py-16 px-6 md:px-16">
+                    <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center min-h-screen">
                             {/* LEFT TEXT */}
                             <div>
                                 <h2 className="text-3xl md:text-4xl font-bold text-hydro-600 mb-4">
@@ -197,7 +201,7 @@ export default function Home() {
                         <h2 className="text-3xl font-bold mb-4">Przekonaliśmy cię?</h2>
                         <p className="mb-6">Napisz do nas dzisiaj!</p>
                         <Link href="/contact"
-                              className="bg-hydro-400 text-black font-semibold px-6 py-3 rounded-full shadow hover:bg-black hover:text-hydro-400 transition">Skontaktuj się z nami
+                              className="bg-hydro-400 text-gray-100 font-semibold px-6 py-3 rounded-full shadow hover:bg-gray-100 hover:text-hydro-400 transition">Skontaktuj się z nami
                             </Link>
                     </div>
                 </section>
