@@ -2,20 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Ukrywa scrollbar — Chrome, Safari, Edge */
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Ukrywa scrollbar — Firefox, IE */
+body {
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  overflow-y: scroll; /* wymagane do działania przewijania */
+  position: relative;
+}
+
+/* Ukrywa scrollbar — Firefox (html) */
+html {
+  scrollbar-width: none;
+}
+
+/* Gradient po prawej krawędzi */
+@keyframes flowGradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 12px;
+  background: linear-gradient(to bottom, #016fd1, #001f3b, #016fd1);
+  background-size: 100% 300%;
+  animation: flowGradient 10s linear infinite;
+  z-index: 50;
+  pointer-events: none;
+  transition: height 0.2s ease-out;
 }
