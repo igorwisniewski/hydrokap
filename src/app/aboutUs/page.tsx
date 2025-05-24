@@ -10,6 +10,7 @@ import {
     HandThumbUpIcon,
 } from "@heroicons/react/24/solid";
 import styles from "../comps/Main.module.css"
+import Link from "next/link";
 
 
 const features = [
@@ -96,14 +97,18 @@ export default function Home() {
                     <p className="text-lg md:text-xl mb-6">
                         Profesjonalizm, doświadczenie i skuteczność
                     </p>
-                    <button
-                        className="bg-hydro-400 hover:text-hydro-400 hover:bg-gray-100  text-gray-100 font-bold py-3 px-6 rounded-full transition mr-2">
-                        Skontaktuj się
-                    </button>
-                    <button
-                        className="border-hydro-400 border-2 hover:text-hydro-400 hover:bg-gray-100  text-gray-100 font-bold py-3 px-6 rounded-full transition">
-                        O nas
-                    </button>
+                    <Link href="/contact">
+                        <button
+                            className="bg-hydro-400 hover:text-hydro-400 hover:bg-gray-100  text-gray-100 font-bold py-3 px-6 rounded-full transition mr-2">
+                            Skontaktuj się
+                        </button>
+                    </Link>
+                    <Link href="/aboutUs">
+                        <button
+                            className="border-hydro-400 border-2 hover:text-hydro-400 hover:bg-gray-100  text-gray-100 font-bold py-3 px-6 rounded-full transition">
+                            O nas
+                        </button>
+                    </Link>
                 </div>
             </section>
                     {/* Sekcja 1 */}
