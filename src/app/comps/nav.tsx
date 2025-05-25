@@ -24,7 +24,7 @@ export default function NavDefault() {
 
                     <Link
                         href="/contact"
-                        className="hidden md:inline-block bg-hydro-600 text-white text-sm font-bold px-5 py-2 rounded-full shadow hover:bg-neutral-800 transition"
+                        className="hidden md:inline-block bg-hydro-600 text-gray-100 text-sm font-bold px-5 py-2 rounded-full shadow hover:bg-gray-100 hover:text-hydro-600 transition"
                     >
                         Zadzwoń teraz
                     </Link>
